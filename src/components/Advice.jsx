@@ -4,7 +4,7 @@ export default function Advice() {
 
     const [advice, setAdvice] = useState(null)
     const [loading, setLoading] = useState(true);
-
+    
 
     const fetchAdvice = () => {
         setLoading(true)
@@ -33,12 +33,12 @@ export default function Advice() {
 
     return (
         <div className="advice_container">
-            <p>ADVICE #117</p>
+            <p>ADVICE #{advice.id}</p>
            <div className="advice">
               <h2>"{advice.advice}"</h2>
            </div>
            <div className="btn_container" onClick={handleClick}>
-             <button className="generate_btn"><img src="/images/icon-dice.svg" alt="" /></button>
+             <button className="generate_btn"><img src="images/icon-dice.svg" alt="" /></button>
            </div>
         </div>
     )
